@@ -1,0 +1,40 @@
+{
+  "name": "bingo-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bingo Online Multijugador - Real-time multiplayer bingo platform",
+  "scripts": {
+    "dev": "pnpm --filter @bingo/backend dev & pnpm --filter @bingo/frontend dev",
+    "dev:backend": "pnpm --filter @bingo/backend dev",
+    "dev:frontend": "pnpm --filter @bingo/frontend dev",
+    "build": "pnpm --filter @bingo/shared-types build && pnpm --filter @bingo/backend build && pnpm --filter @bingo/frontend build",
+    "build:backend": "pnpm --filter @bingo/shared-types build && pnpm --filter @bingo/backend build",
+    "build:frontend": "pnpm --filter @bingo/shared-types build && pnpm --filter @bingo/frontend build",
+    "lint": "pnpm --filter \"./apps/**\" lint && pnpm --filter \"./packages/**\" lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "type-check": "pnpm --filter \"./apps/**\" type-check && pnpm --filter \"./packages/**\" type-check",
+    "test": "pnpm --filter \"./apps/**\" test && pnpm --filter \"./packages/**\" test",
+    "test:e2e": "pnpm --filter @bingo/frontend test:e2e",
+    "test:coverage": "pnpm test -- --coverage",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.1",
+  "dependencies": {
+    "socket.io-client": "^4.6.1"
+  }
+}

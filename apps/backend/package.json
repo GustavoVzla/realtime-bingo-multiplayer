@@ -1,0 +1,40 @@
+{
+  "name": "@bingo/backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Bingo Online - Backend Server",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@bingo/shared-types": "workspace:*",
+    "@supabase/supabase-js": "^2.38.4",
+    "@upstash/redis": "^1.35.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.1.0",
+    "ioredis": "^5.8.2",
+    "socket.io": "^4.6.1",
+    "uuid": "^9.0.1",
+    "winston": "^3.18.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/ioredis": "^5.0.0",
+    "@types/node": "^20.11.5",
+    "@types/uuid": "^9.0.7",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^4.0.7"
+  }
+}

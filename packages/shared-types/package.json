@@ -1,0 +1,27 @@
+{
+  "name": "@bingo/shared-types",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shared TypeScript types for Bingo Online",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.4",
+    "zod": "^3.22.4"
+  }
+}
